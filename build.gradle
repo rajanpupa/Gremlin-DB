@@ -1,0 +1,35 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.5.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.rajan.graph'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+	jcenter()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//implementation 'com.microsoft.spring.data.gremlin:spring-data-gremlin:2.0.0'
+	implementation 'com.microsoft.spring.data.gremlin:spring-data-gremlin:2.0.0'
+
+	//implementation 'org.apache.tinkerpop:gremlin-driver:3.2.4'
+
+	//compile group: 'org.janusgraph', name: 'janusgraph-core', version: '0.3.1'
+	//implementation 'org.janusgraph:janusgraph-core:0.2.0-SNAPSHOT'
+	//https://mvnrepository.com/artifact/org.apache.tinkerpop/tinkergraph-gremlin
+	//implementation group: 'org.apache.tinkerpop', name: 'tinkergraph-gremlin', version: '3.2.4'
+
+	//other
+	compileOnly 'org.projectlombok:lombok:1.16.16'
+	//annotationProcessor 'org.projectlombok:lombok:1.16.6'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+}
